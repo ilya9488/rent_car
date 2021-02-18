@@ -22,120 +22,120 @@ section {
 }
 @-webkit-keyframes background {
   0% {
-    background: #000000 url(../img/slider_img/1.jpg) center no-repeat;
+    background: #000000 url(img/slider_img/1.jpg) center no-repeat;
     background-size: cover;
   }
   33% {
-    background: #000000 url(../img/slider_img/2.jpg) center no-repeat;
+    background: #000000 url(img/slider_img/2.jpg) center no-repeat;
     background-size: cover;
   }
   66% {
-    background: #000000 url(../img/slider_img/3.jpg) center no-repeat;
+    background: #000000 url(img/slider_img/3.jpg) center no-repeat;
     background-size: cover;
   }
   100% {
-    background: #000000 url(../img/slider_img/1.jpg) center no-repeat;
+    background: #000000 url(img/slider_img/1.jpg) center no-repeat;
     background-size: cover;
   }
 }
 @keyframes background {
   0% {
-    background: #000000 url(../img/slider_img/1.jpg) center no-repeat;
+    background: #000000 url(img/slider_img/1.jpg) center no-repeat;
     background-size: cover;
   }
   33% {
-    background: #000000 url(../img/slider_img/2.jpg) center no-repeat;
+    background: #000000 url(img/slider_img/2.jpg) center no-repeat;
     background-size: cover;
   }
   66% {
-    background: #000000 url(../img/slider_img/3.jpg) center no-repeat;
+    background: #000000 url(img/slider_img/3.jpg) center no-repeat;
     background-size: cover;
   }
   100% {
-    background: #000000 url(../img/slider_img/1.jpg) center no-repeat;
+    background: #000000 url(img/slider_img/1.jpg) center no-repeat;
     background-size: cover;
   }
 }
 @-webkit-keyframes pulse {
   0% {
-    background: url(/img/animate_phone/phone0.png) center center no-repeat;
+    background: url(img/animate_phone/phone0.png) center center no-repeat;
     background-size: 130%;
     background-position: -18px -19px;
   }
   15% {
-    background: url(/img/animate_phone/phone1.png) center center no-repeat;
+    background: url(img/animate_phone/phone1.png) center center no-repeat;
     background-size: 125%;
     background-position: -16px -17px;
   }
   30% {
-    background: url(/img/animate_phone/phone2.png) center center no-repeat;
+    background: url(img/animate_phone/phone2.png) center center no-repeat;
     background-size: 125%;
     background-position: -16px -17px;
   }
   45% {
-    background: url(/img/animate_phone/phone3.png) center center no-repeat;
+    background: url(img/animate_phone/phone3.png) center center no-repeat;
     background-size: 125%;
     background-position: -16px -17px;
   }
   60% {
-    background: url(/img/animate_phone/phone4.png) center center no-repeat;
+    background: url(img/animate_phone/phone4.png) center center no-repeat;
     background-size: 125%;
     background-position: -16px -17px;
   }
   75% {
-    background: url(/img/animate_phone/phone3.png) center center no-repeat;
+    background: url(img/animate_phone/phone3.png) center center no-repeat;
     background-size: 125%;
     background-position: -16px -17px;
   }
   90% {
-    background: url(/img/animate_phone/phone2.png) center center no-repeat;
+    background: url(img/animate_phone/phone2.png) center center no-repeat;
     background-size: 125%;
     background-position: -16px -17px;
   }
   100% {
-    background: url(/img/animate_phone/phone1.png) center center no-repeat;
+    background: url(img/animate_phone/phone1.png) center center no-repeat;
     background-size: 125%;
     background-position: -16px -17px;
   }
 }
 @keyframes pulse {
   0% {
-    background: url(/img/animate_phone/phone0.png) center center no-repeat;
+    background: url(img/animate_phone/phone0.png) center center no-repeat;
     background-size: 130%;
     background-position: -18px -19px;
   }
   15% {
-    background: url(/img/animate_phone/phone1.png) center center no-repeat;
+    background: url(img/animate_phone/phone1.png) center center no-repeat;
     background-size: 125%;
     background-position: -16px -17px;
   }
   30% {
-    background: url(/img/animate_phone/phone2.png) center center no-repeat;
+    background: url(img/animate_phone/phone2.png) center center no-repeat;
     background-size: 125%;
     background-position: -16px -17px;
   }
   45% {
-    background: url(/img/animate_phone/phone3.png) center center no-repeat;
+    background: url(img/animate_phone/phone3.png) center center no-repeat;
     background-size: 125%;
     background-position: -16px -17px;
   }
   60% {
-    background: url(/img/animate_phone/phone4.png) center center no-repeat;
+    background: url(img/animate_phone/phone4.png) center center no-repeat;
     background-size: 125%;
     background-position: -16px -17px;
   }
   75% {
-    background: url(/img/animate_phone/phone3.png) center center no-repeat;
+    background: url(img/animate_phone/phone3.png) center center no-repeat;
     background-size: 125%;
     background-position: -16px -17px;
   }
   90% {
-    background: url(/img/animate_phone/phone2.png) center center no-repeat;
+    background: url(img/animate_phone/phone2.png) center center no-repeat;
     background-size: 125%;
     background-position: -16px -17px;
   }
   100% {
-    background: url(/img/animate_phone/phone1.png) center center no-repeat;
+    background: url(img/animate_phone/phone1.png) center center no-repeat;
     background-size: 125%;
     background-position: -16px -17px;
   }
