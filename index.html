@@ -5,48 +5,54 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Прокат авто</title>
-	<link rel="stylesheet" href="css/normalize.min.css">
-	<link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
-	<main>
+	<!-- Меню бургер -->
+
+	<div class="menu_burger">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
+	<div class="menu_berger_list">
+		<span class="menu_berger_list_close">&times</span>
+		<ul>
+			<li><img class="small_car" src="img/logo/small_car.svg" alt=""></li>
+			<li class="nav_list"><a class="close_a" href="#price">Автомобили</a></li>
+			<li><a class="close_a" href="#">Условия проката</a></li>
+			<li><a class="close_a" href="#">Контакты</a></li>
+			<li><a class="close_a" href="#">Отзывы</a></li>
+		</ul>
+	</div>
+
+
+	<!-- ============== первый экран ============ -->
+	<main class="main">
+		<!-- Заголовок -->
 		<div class="title">
 			<h1> Аренда Авто MRPL <img class="small_car" src="img/logo/small_car_2.svg" alt=""></h1>
 		</div>
+		<!-- Навигация по сайту -->
 		<div class="nav_container">
 			<nav class="nav">
 				<ul>
 					<li><img class="small_car" src="img/logo/small_car.svg" alt=""></li>
-					<li class="nav_list"><a href="#">Автомобили</a></li>
+					<li class="nav_list"><a href="#price">Автомобили</a></li>
 					<li><a href="#">Условия проката</a></li>
 					<li><a href="#">Контакты</a></li>
+					<li><a href="#">Отзывы</a></li>
 					<li class="ua"><a href="#">ua</a></li>
 					<li class="ru"><a href="#">ru</a></li>
 				</ul>
 			</nav>
 		</div>
-		<div class="container">
-			<div class="slider">
-				<div class="slider_line">
-					<img class="slide_img" src="img/slider_img/1.jpg" alt="">
-					<img class="slide_img" src="img/slider_img/2.jpg" alt="">
-					<img class="slide_img" src="img/slider_img/3.jpg" alt="">
-				</div>
-			</div>
-
-			<!-- <button class="button prev-slide">Назад</button> -->
-			<!-- <button class="button next-slide">Вперёд</button> -->
-
-			<div class="courses">
-
-			</div>
-		</div>
 	</main>
 
-	<button class="call__btn"><a href=""><img src="img/phone.png" alt=""></a></button>
-
-	<section class="price">
+	<!-- ========== Авто и цены ============ -->
+	<section id="price" class="price">
 		<div class="title_price_car">
 			<h2>Автомобили</h2>
 		</div>
@@ -55,31 +61,31 @@
 			<ul>
 				<li>
 					<img class="icon_parametr_avto" src="img/logo/canistra.svg" alt="">
-					 Бензин 1.9
+					Бензин 1.9
 				</li>
 				<li><img class="icon_parametr_avto" src="img/logo/kpp_2.png" alt=""> Механика</li>
 			</ul>
-			<div class="img_car"><img src="img/car_1.jpg" alt=""></div>
+			<div class="img_car"><img src="img/auto/auto_1.jpg" alt=""></div>
 			<div class="price_auto">
 				<span class="logo_money">
-					<img class="icon_parametr_avto" src="img/logo/money.svg" alt=""> 
+					<img class="icon_parametr_avto" src="img/logo/money.svg" alt="">
 					100грн./час
-			</span>
-		</div>
+				</span>
+			</div>
 		</div>
 		<div class="price__block">
 			<h2>KIA</h2>
 			<ul>
 				<li><i class="fas fa-gas-pump"></i> Дизель 2.0</li>
-				<li><img class="icon_parametr_avto" src="img/logo/kpp_1.svg" alt=""> Автоиат</li>
+				<li><img class="icon_parametr_avto" src="img/logo/kpp_1.svg" alt=""> Автомат</li>
 			</ul>
-			<div class="img_car"><img src="img/car_2.jpg" alt=""></div>
+			<div class="img_car"><img src="img/auto/auto_2.jpg" alt=""></div>
 			<div class="price_auto">
 				<span class="logo_money">
-					<img class="icon_parametr_avto" src="img/logo/money.svg" alt=""> 
+					<img class="icon_parametr_avto" src="img/logo/money.svg" alt="">
 					100грн./час
-			</span>
-		</div>
+				</span>
+			</div>
 		</div>
 
 		<div class="price__block">
@@ -87,55 +93,227 @@
 			<ul>
 				<li>
 					<img class="icon_parametr_avto" src="img/logo/canistra.svg" alt="">
-					 Бензин 1.9
+					Бензин 1.9
 				</li>
 				<li><img class="icon_parametr_avto" src="img/logo/kpp_2.png" alt=""> Механика</li>
 			</ul>
-			<div class="img_car"><img src="img/car_1.jpg" alt=""></div>
+			<div class="img_car"><img src="img/auto/auto_3.jpg" alt=""></div>
 			<div class="price_auto">
 				<span class="logo_money">
-					<img class="icon_parametr_avto" src="img/logo/money.svg" alt=""> 
+					<img class="icon_parametr_avto" src="img/logo/money.svg" alt="">
 					100грн./час
-			</span>
-		</div>
+				</span>
+			</div>
 		</div>
 		<div class="price__block">
 			<h2>KIA</h2>
 			<ul>
 				<li><i class="fas fa-gas-pump"></i> Дизель 2.0</li>
-				<li><img class="icon_parametr_avto" src="img/logo/kpp_1.svg" alt=""> Автоиат</li>
+				<li><img class="icon_parametr_avto" src="img/logo/kpp_1.svg" alt=""> Автомат</li>
 			</ul>
-			<div class="img_car"><img src="img/car_2.jpg" alt=""></div>
+			<div class="img_car"><img src="img/auto/auto_4.jpg" alt=""></div>
 			<div class="price_auto">
 				<span class="logo_money">
-					<img class="icon_parametr_avto" src="img/logo/money.svg" alt=""> 
+					<img class="icon_parametr_avto" src="img/logo/money.svg" alt="">
 					100грн./час
-			</span>
+				</span>
+			</div>
 		</div>
+		<div class="price__block">
+			<h2>Volkswagen</h2>
+			<ul>
+				<li>
+					<img class="icon_parametr_avto" src="img/logo/canistra.svg" alt="">
+					Бензин 1.9
+				</li>
+				<li><img class="icon_parametr_avto" src="img/logo/kpp_2.png" alt=""> Механика</li>
+			</ul>
+			<div class="img_car"><img src="img/auto/auto_5.jpg" alt=""></div>
+			<div class="price_auto">
+				<span class="logo_money">
+					<img class="icon_parametr_avto" src="img/logo/money.svg" alt="">
+					100грн./час
+				</span>
+			</div>
+		</div>
+		<div class="price__block">
+			<h2>KIA</h2>
+			<ul>
+				<li><i class="fas fa-gas-pump"></i> Дизель 2.0</li>
+				<li><img class="icon_parametr_avto" src="img/logo/kpp_1.svg" alt=""> Автомат</li>
+			</ul>
+			<div class="img_car"><img src="img/auto/auto_6.jpg" alt=""></div>
+			<div class="price_auto">
+				<span class="logo_money">
+					<img class="icon_parametr_avto" src="img/logo/money.svg" alt="">
+					100грн./час
+				</span>
+			</div>
+		</div>
+
+		<div class="price__block">
+			<h2>Volkswagen</h2>
+			<ul>
+				<li>
+					<img class="icon_parametr_avto" src="img/logo/canistra.svg" alt="">
+					Бензин 1.9
+				</li>
+				<li><img class="icon_parametr_avto" src="img/logo/kpp_2.png" alt=""> Механика</li>
+			</ul>
+			<div class="img_car"><img src="img/auto/auto_7.jpg" alt=""></div>
+			<div class="price_auto">
+				<span class="logo_money">
+					<img class="icon_parametr_avto" src="img/logo/money.svg" alt="">
+					100грн./час
+				</span>
+			</div>
+		</div>
+		<div class="price__block">
+			<h2>KIA</h2>
+			<ul>
+				<li><i class="fas fa-gas-pump"></i> Дизель 2.0</li>
+				<li><img class="icon_parametr_avto" src="img/logo/kpp_1.svg" alt=""> Автомат</li>
+			</ul>
+			<div class="img_car"><img src="img/auto/auto_8.jpg" alt=""></div>
+			<div class="price_auto">
+				<span class="logo_money">
+					<img class="icon_parametr_avto" src="img/logo/money.svg" alt="">
+					100грн./час
+				</span>
+			</div>
+		</div>
+		<div class="price__block">
+			<h2>KIA</h2>
+			<ul>
+				<li><i class="fas fa-gas-pump"></i> Дизель 2.0</li>
+				<li><img class="icon_parametr_avto" src="img/logo/kpp_1.svg" alt=""> Автомат</li>
+			</ul>
+			<div class="img_car"><img src="img/auto/auto_9.jpg" alt=""></div>
+			<div class="price_auto">
+				<span class="logo_money">
+					<img class="icon_parametr_avto" src="img/logo/money.svg" alt="">
+					100грн./час
+				</span>
+			</div>
+		</div>
+		<div class="price__block">
+			<h2>KIA</h2>
+			<ul>
+				<li><i class="fas fa-gas-pump"></i> Дизель 2.0</li>
+				<li><img class="icon_parametr_avto" src="img/logo/kpp_1.svg" alt=""> Автомат</li>
+			</ul>
+			<div class="img_car"><img src="img/auto/lancer blue.webp" alt=""></div>
+			<div class="price_auto">
+				<span class="logo_money">
+					<img class="icon_parametr_avto" src="img/logo/money.svg" alt="">
+					100грн./час
+				</span>
+			</div>
+		</div>
+		
+	</section>
+
+	<section class="when_need">
+		<div class="when_need_container">
+			<div class="when_need_text">
+				<img class="think" src="/img/think.jpg" alt="">
+				<h3 class="when_need_text_h3">КОГДА МОЖЕТ ПОНАДОБИТЬСЯ АРЕНДА АВТОМОБИЛЯ <i class="far fa-question-circle"></i>
+				</h3>
+
+				<div class="when_need_text_p">
+					<img class="when_need_text_img" src="/img/rent_auto_doc.jpg" alt="">
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non distinctio cumque perferendis tempora ea
+					voluptatibus, cupiditate tempore dolor at, sit officia aliquid voluptatum. Dolor alias cumque magni,
+					consequatur earum sit ea praesentium aliquam quam libero? Suscipit, adipisci cupiditate doloremque eum facilis
+					officiis deleniti nulla quisquam quasi perferendis, exercitationem et commodi sed repellat dignissimos alias
+					unde repudiandae obcaecati in officia id possimus facere? Facilis blanditiis, tempore tenetur illum odit
+					dolorum, excepturi dolorem distinctio qui voluptas ad ex amet libero? Minima placeat provident eligendi,
+					dolorem quas tempore quaerat, quo necessitatibus numquam deserunt modi itaque aliquam consequatur, facere cum
+					nemo minus adipisci quos architecto asperiores odio. Exercitationem laudantium maiores, quis sed veniam dolor
+					consequatur mollitia, doloremque temporibus magnam odio nesciunt adipisci beatae corporis modi saepe delectus
+					placeat voluptatum ullam reprehenderit recusandae earum! Explicabo sed maiores, provident impedit esse
+				, aliquid tempore aut corrupti molestias vero maiores.
+				</div>
+			</div>
 		</div>
 	</section>
-<h3>КОГДА МОЖЕТ ПОТРЕБОВАТЬСЯ АРЕНДА АВТОМОБИЛЯ?</h3>
-
-	<section class="when_needed">
-
+	<!-- Блок Коментариев -->
+	<section class="comets">
+		<div id="sigCommentsBlock"></div>
+		<a href="http://sigcomments.com" style="font-size: 0.6em;">Система комментирования SigComments</a>
+		<script type="text/javascript">
+			(function () {
+				var host_id = '5053';
+				var script = document.createElement('script');
+				script.type = 'text/javascript';
+				script.async = true;
+				script.src = '//sigcomments.com/chat/?host_id=' + host_id;
+				var ss = document.getElementsByTagName('script')[0];
+				ss.parentNode.insertBefore(script, ss);
+			})();
+		</script>
 	</section>
+	<!--Подвал футер  -->
+	<footer class="footer">
+		<div class="footer_contact">
+			<div id="sigCommentsBlock"></div>
+			<!-- <a href="http://sigcomments.com" style="font-size: 0.6em;">Система комментирования SigComments</a> -->
+			<script type="text/javascript">
+				(function () {
+					var host_id = '5054';
+					var script = document.createElement('script');
+					script.type = 'text/javascript';
+					script.async = true;
+					script.src = '//sigcomments.com/chat/?host_id=' + host_id;
+					var ss = document.getElementsByTagName('script')[0];
+					ss.parentNode.insertBefore(script, ss);
+				})();
+			</script>
 
-	<!-- <main>
-	<div class="container">
-		<div class="content">
-			<img src="img/car_1.jpg" alt="car" class="img">
-			<button class="btn">100грн/час Заказать</button>
+		</div>
+	</footer>
+
+
+	<!-- Кнопка позвонить -->
+	<button class="call__btn"></button>
+
+	<!-- Модальные окна -->
+
+	<div class="modal_window_call">
+		<span class="close_modal">&times</span>
+		<div class="modal_window_call_phones">
+			<div class="modal_window_call_phones_number">
+				<a href="tel:+7 (8142) 33 22 11"><img src="/img/logo/phones/kyivstar.png" alt=""></a>
+			</div>
+			<div class="modal_window_call_phones_number">
+				<a href="tel:+7 (8142) 33 22 11"><img src="/img/logo/phones/lifecell.jpg" alt=""></a>
+			</div>
+			<div class="modal_window_call_phones_number">
+				<a href="tel:+7 (8142) 33 22 11"><img src="/img/logo/phones/vodafone-image.png" alt=""></a>
+			</div>
+
 		</div>
 	</div>
-</main> -->
 
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
 	<script src="js/style.js"></script>
 	<script src="https://kit.fontawesome.com/ade14bcf0a.js" crossorigin="anonymous"></script>
 
-	<script id="__bs_script__">//<![CDATA[
-		document.write("<script async src='http://HOST:3002/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
-//]]>
+	<!-- Переписка с клиентом -->
+	<script>
+		window.replainSettings = { id: '36056b5f-79da-4bed-8971-2f17a22c71f6' };
+		(function (u) {
+			var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = u;
+			var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+		})('https://widget.replain.cc/dist/client.js');
 	</script>
+	<!-- комет админ -->
+	<!-- <iframe frameborder="0" src="http://ru.sigcomments.com/admin?host_id=5053&email=ilya.orel9488@gmail.com" marginheight="0" marginwidth="0" id="sigCommentsAdmin" name="sigCommentsAdmin" style="display: block; margin: 0px; padding: 0px; height: 1000px; width: 1100px;"></iframe> -->
+
+
+	<!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+		<div class="elfsight-app-15bc20da-c805-4454-994c-25c7e41d2ced"></div> -->
 </body>
 
 </html>
