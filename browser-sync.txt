@@ -1,0 +1,1 @@
+start Koala & browser-sync start --server --files "*.html" start --watch --files "css/*.css"  start --watch --files "js/*.js"
