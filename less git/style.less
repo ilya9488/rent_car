@@ -100,6 +100,21 @@ section {
   }
 }
 
+//  анимация кнопки закрыть
+@keyframes close {
+  0% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
 .main {
   position: relative;
   display: block;
@@ -373,7 +388,115 @@ section {
 
 }
 
+
+
 // модальные окна 
+// Машины и цены
+.modal_window_car_price {
+  position: fixed;
+  width: 65rem;
+  height: 30rem;
+  background-color: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #000;
+  animation: hide 1s;
+  display: none;
+
+  .close_modal_car_price {
+    position: absolute;
+    right: 1rem;
+    font-size: 3rem;
+    cursor: pointer;
+    animation: close 10s infinite;
+  }
+
+  &_content {
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+
+    &_img {
+      display: inline-block;
+      position: relative;
+      width: 27rem;
+      margin-top: 5rem;
+      margin-left: 1rem;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        margin-bottom: 3rem;
+      }
+
+    }
+
+    &_table {
+      position: relative;
+      display: flex;
+      width: 35rem;
+      height: 25rem;
+      margin-top: 3rem;
+      margin-left: 1rem;
+      // box-shadow: 0 0 20px #000;
+
+      &_colum {
+        position: relative;
+        display: block;
+        width: 120px;
+        height: 21rem;
+        margin-left: 0.3rem;
+        // box-shadow: 0 0 20px #000;
+
+        &_block {
+          position: relative;
+          display: block;
+          height: 6rem;
+          margin-top: 0.4rem;
+          border-radius: 10px;
+          padding: 0.5rem;
+          text-align: center;
+          font-size: 1rem;
+          // box-shadow: 0 0 20px #000;
+
+          img {
+            width: 60%;
+          }
+        }
+
+        .head_table {
+          height: 4rem;
+          border-radius: 0%;
+          padding-top: 1rem;
+          font-size: 0.9rem;
+          background-color: #d6d4d4;
+        }
+
+        .price_day_tble {
+          height: 3rem;
+          padding-top: 0.8rem;
+          font-size: 1.3rem;
+          font-weight: bold;
+          color: rgb(202, 156, 5);
+        }
+
+        .img_table {
+          height: 6rem;
+          font-size: 0.9rem;
+        }
+
+        .margin {
+          margin-top: 10rem !important;
+        }
+      }
+    }
+  }
+
+}
+
 // кнопка позвонить
 .modal_window_call {
   position: fixed;
@@ -382,23 +505,30 @@ section {
   width: 18rem;
   height: 21rem;
   z-index: 3;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: transparent;
   border-radius: 10%;
   display: none;
+
+  &:hover {}
 
   span {
     display: inline-block;
     position: absolute;
-    color: #fff;
+    color: #000;
     right: 1rem;
     top: -5px;
-    font-size: 3rem;
+    font-size: 2rem;
+    padding: 0 0.6rem;
+    border: 1px solid #000;
+    border-radius: 50%;
     transition: 0.3s;
     cursor: pointer;
+    animation: close 5s infinite;
 
     &:hover {
+      font-size: 2.5rem;
+      padding: 0.2rem 0.8rem 0;
       transform: rotate(90deg);
-      text-shadow: 0 0 20px rgb(255, 255, 255);
     }
   }
 
@@ -468,7 +598,32 @@ section {
     color: #000;
     cursor: pointer;
     z-index: 99;
+    transition: 0.3s;
+    animation: close 10s infinite;
 
+    &:hover {
+      font-size: 3.5rem;
+    }
+  }
+
+  .title_conditions,
+  .title_contract {
+    display: inline-block;
+    width: 20rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 1rem 0 1rem 0;
+    text-align: center;
+    margin: 0 3rem 2rem 3rem;
+    border-radius: 50px;
+    color: rgb(56, 56, 56);
+    background-color: #c6c6c6;
+    transition: 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0 10px #000;
+    }
   }
 
   &_text {}
@@ -559,6 +714,7 @@ div#__replain_widget {
     font-size: 3rem;
     color: #fff;
     cursor: pointer;
+    animation: close 5s infinite;
   }
 
 
@@ -567,7 +723,6 @@ div#__replain_widget {
     border-bottom: 1px solid #fff;
   }
 
-  // display: none;
   .small_car {
     width: 10rem;
   }
@@ -581,7 +736,7 @@ div#__replain_widget {
   top: 0;
   background-color: transparent;
   z-index: 3 !important;
-  // display: none;
+  display: none;
 }
 
 // Кнопка позвонить
@@ -602,7 +757,7 @@ div#__replain_widget {
   z-index: 99;
   overflow: hidden;
   transition: 0.5s;
-  // animation: pulse 3s infinite;
+  animation: pulse 3s infinite;
 
   &:hover {
     // transform: rotate(-260deg);

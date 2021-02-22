@@ -140,6 +140,34 @@ section {
     background-position: -12px -13px;
   }
 }
+@-webkit-keyframes close {
+  0% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+@keyframes close {
+  0% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
 .main {
   position: relative;
   display: block;
@@ -355,6 +383,101 @@ section {
   height: 15rem;
   background-color: #4e4e4e;
 }
+.modal_window_car_price {
+  position: fixed;
+  width: 65rem;
+  height: 30rem;
+  background-color: #fff;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 20px #000;
+          box-shadow: 0 0 20px #000;
+  -webkit-animation: hide 1s;
+          animation: hide 1s;
+  display: none;
+}
+.modal_window_car_price .close_modal_car_price {
+  position: absolute;
+  right: 1rem;
+  font-size: 3rem;
+  cursor: pointer;
+  -webkit-animation: close 10s infinite;
+          animation: close 10s infinite;
+}
+.modal_window_car_price_content {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+}
+.modal_window_car_price_content_img {
+  display: inline-block;
+  position: relative;
+  width: 27rem;
+  margin-top: 5rem;
+  margin-left: 1rem;
+  overflow: hidden;
+}
+.modal_window_car_price_content_img img {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.modal_window_car_price_content_table {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 35rem;
+  height: 25rem;
+  margin-top: 3rem;
+  margin-left: 1rem;
+}
+.modal_window_car_price_content_table_colum {
+  position: relative;
+  display: block;
+  width: 120px;
+  height: 21rem;
+  margin-left: 0.3rem;
+}
+.modal_window_car_price_content_table_colum_block {
+  position: relative;
+  display: block;
+  height: 6rem;
+  margin-top: 0.4rem;
+  border-radius: 10px;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+}
+.modal_window_car_price_content_table_colum_block img {
+  width: 60%;
+}
+.modal_window_car_price_content_table_colum .head_table {
+  height: 4rem;
+  border-radius: 0%;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  background-color: #d6d4d4;
+}
+.modal_window_car_price_content_table_colum .price_day_tble {
+  height: 3rem;
+  padding-top: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ca9c05;
+}
+.modal_window_car_price_content_table_colum .img_table {
+  height: 6rem;
+  font-size: 0.9rem;
+}
+.modal_window_car_price_content_table_colum .margin {
+  margin-top: 10rem !important;
+}
 .modal_window_call {
   position: fixed;
   right: 10rem;
@@ -362,25 +485,31 @@ section {
   width: 18rem;
   height: 21rem;
   z-index: 3;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: transparent;
   border-radius: 10%;
   display: none;
 }
 .modal_window_call span {
   display: inline-block;
   position: absolute;
-  color: #fff;
+  color: #000;
   right: 1rem;
   top: -5px;
-  font-size: 3rem;
+  font-size: 2rem;
+  padding: 0 0.6rem;
+  border: 1px solid #000;
+  border-radius: 50%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
+  -webkit-animation: close 5s infinite;
+          animation: close 5s infinite;
 }
 .modal_window_call span:hover {
+  font-size: 2.5rem;
+  padding: 0.2rem 0.8rem 0;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  text-shadow: 0 0 20px #ffffff;
 }
 .modal_window_call_phones {
   position: relative;
@@ -445,6 +574,34 @@ section {
   color: #000;
   cursor: pointer;
   z-index: 99;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-animation: close 10s infinite;
+          animation: close 10s infinite;
+}
+.contract_modal_window_close:hover {
+  font-size: 3.5rem;
+}
+.contract_modal_window .title_conditions,
+.contract_modal_window .title_contract {
+  display: inline-block;
+  width: 20rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: 1rem 0 1rem 0;
+  text-align: center;
+  margin: 0 3rem 2rem 3rem;
+  border-radius: 50px;
+  color: #383838;
+  background-color: #c6c6c6;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.contract_modal_window .title_conditions:hover,
+.contract_modal_window .title_contract:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 10px #000;
+          box-shadow: 0 0 10px #000;
 }
 .contract_back {
   position: fixed;
@@ -528,6 +685,8 @@ div#__replain_widget {
   font-size: 3rem;
   color: #fff;
   cursor: pointer;
+  -webkit-animation: close 5s infinite;
+          animation: close 5s infinite;
 }
 .menu_berger_list li {
   padding: 1rem;
@@ -544,6 +703,7 @@ div#__replain_widget {
   top: 0;
   background-color: transparent;
   z-index: 3 !important;
+  display: none;
 }
 .call__btn {
   position: fixed;
@@ -559,6 +719,8 @@ div#__replain_widget {
   overflow: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  -webkit-animation: pulse 3s infinite;
+          animation: pulse 3s infinite;
 }
 .call__btn:hover {
   -webkit-box-shadow: 0 0 20px 20px rgba(255, 255, 255, 0.555);
