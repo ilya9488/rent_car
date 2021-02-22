@@ -372,9 +372,26 @@ section {
   margin: 0 auto;
   float: right;
 }
-.comets {
+.coments {
+  position: relative;
   width: 50%;
   margin: 0 auto;
+}
+.coments_title {
+  text-align: center;
+}
+.coments_span {
+  margin-bottom: 2rem;
+  display: block;
+  text-align: center;
+}
+.coments .coll_star {
+  position: absolute;
+  top: 7rem;
+  right: 7rem;
+  font-size: 0.9rem;
+  color: #ffae00;
+  z-index: 99;
 }
 .footer {
   height: auto;

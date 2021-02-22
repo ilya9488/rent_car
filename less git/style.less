@@ -370,9 +370,29 @@ section {
 
 // Коментарии
 
-.comets {
+.coments {
+  position: relative;
   width: 50%;
   margin: 0 auto;
+
+  &_title {
+    text-align: center;
+  }
+
+  &_span {
+    margin-bottom: 2rem;
+    display: block;
+    text-align: center;
+  }
+
+  .coll_star {
+    position: absolute;
+    top: 7rem;
+    right: 7rem;
+    font-size: 0.9rem;
+    color: rgb(255, 174, 0);
+    z-index: 99;
+  }
 }
 
 
