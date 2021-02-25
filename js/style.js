@@ -240,3 +240,21 @@ close_KIA_Rio_Next.onclick = function () {
    KIA_Rio_Next_window.style.display = "none"
    close_back.style.display = "none";
 }
+
+let table_btn = document.querySelector('.table_price_car_btn')
+let table_block = document.querySelector('.table_price_car')
+let table_price_car_btn_close = document.querySelector('.table_price_car_btn_close')
+
+
+table_btn.onclick = function () { 
+   table_block.style.display = "block"
+   table_price_car_btn_close.style.display = "block"
+   table_btn.style.display = "none"
+}
+
+table_price_car_btn_close.onclick = function () { 
+   table_block.style.display = "none"
+   table_price_car_btn_close.style.display = "none"
+   table_btn.style.display = "block"
+}
+
