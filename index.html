@@ -23,7 +23,7 @@
 			<li><img class="small_car" src="img/logo/small_car.svg" alt=""></li>
 			<li class="nav_list"><a class="close_a" href="#price">Автомобили | Цены</a></li>
 			<li class="contract">Условия проката <span>Договор</span></li>
-			<li><a class="close_a" href="#">Контакты</a></li>
+			<li><a class="close_a" href="#social">Контакты | Соцсети </a></li>
 			<li><a class="close_a" href="#feedback">Отзывы | Предложения</a></li>
 		</ul>
 	</div>
@@ -39,7 +39,7 @@
 					<li><img class="small_car" src="img/logo/small_car.svg" alt=""></li>
 					<li class="nav_list"><a href="#price">Автомобили <span>Цены</span></a></li>
 					<li class="nav_contract">Условия проката <span>Договор</span></li>
-					<li><a href="#">Контакты</a></li>
+					<li><a href="#social">Контакты</a><span>Соцсети</span></li>
 					<li><a href="#feedback">Отзывы <span>Предложения</span></a></li>
 					<!-- <li class="ua"><a href="#">ua</a></li> -->
 					<!-- <li class="ru"><a href="#">ru</a></li> -->
@@ -77,7 +77,10 @@
 		<div class="price__block Kia_rio">
 			<h2>KIA Rio</h2>
 			<ul>
-				<li><i class="fas fa-gas-pump"></i> Дизель 2.0</li>
+				<li>
+					<img class="icon_parametr_avto" src="img/logo/canistra.svg" alt="">
+					Дизель 2.0
+				</li>
 				<li><img class="icon_parametr_avto" src="img/logo/kpp_1.svg" alt=""> Автомат</li>
 			</ul>
 			<div class="img_car"><img src="img/auto/auto_2.jpg" alt=""></div>
@@ -109,7 +112,10 @@
 		<div class="price__block mazda_next">
 			<h2>Mazda 3</h2>
 			<ul>
-				<li><i class="fas fa-gas-pump"></i> Дизель 2.0</li>
+				<li>
+					<img class="icon_parametr_avto" src="img/logo/canistra.svg" alt="">
+					Дизель 2.0
+				</li>
 				<li><img class="icon_parametr_avto" src="img/logo/kpp_1.svg" alt=""> Автомат</li>
 			</ul>
 			<div class="img_car"><img src="img/auto/auto_4.jpg" alt=""></div>
@@ -140,7 +146,10 @@
 		<div class="price__block Hyundai_accent">
 			<h2>Hyundai accent</h2>
 			<ul>
-				<li><i class="fas fa-gas-pump"></i> Дизель 2.0</li>
+				<li>
+					<img class="icon_parametr_avto" src="img/logo/canistra.svg" alt="">
+					Дизель 2.0
+				</li>
 				<li><img class="icon_parametr_avto" src="img/logo/kpp_1.svg" alt=""> Автомат</li>
 			</ul>
 			<div class="img_car"><img src="img/auto/auto_6.jpg" alt=""></div>
@@ -172,7 +181,10 @@
 		<div class="price__block Hyundai_accent_next_to">
 			<h2>Hyundai accent</h2>
 			<ul>
-				<li><i class="fas fa-gas-pump"></i> Дизель 2.0</li>
+				<li>
+					<img class="icon_parametr_avto" src="img/logo/canistra.svg" alt="">
+					Дизель 2.0
+				</li>
 				<li><img class="icon_parametr_avto" src="img/logo/kpp_1.svg" alt=""> Автомат</li>
 			</ul>
 			<div class="img_car"><img src="img/auto/auto_8.jpg" alt=""></div>
@@ -186,7 +198,10 @@
 		<div class="price__block KIA_Rio_Next">
 			<h2>KIA Rio</h2>
 			<ul>
-				<li><i class="fas fa-gas-pump"></i> Дизель 2.0</li>
+				<li>
+					<img class="icon_parametr_avto" src="img/logo/canistra.svg" alt="">
+					Дизель 2.0
+				</li>
 				<li><img class="icon_parametr_avto" src="img/logo/kpp_1.svg" alt=""> Автомат</li>
 			</ul>
 			<div class="img_car"><img src="img/auto/auto_9.jpg" alt=""></div>
@@ -228,8 +243,27 @@
 	<section class="coments" id="feedback">
 		<h2 class="coments_title">Поделитесь Вашим отзывом</h2>
 		<span class="coments_span">Будем рады коментариямям и предложениям</span>
-		<span class="coll_star">Оцените наши услуги</span>
-		<div id="sigCommentsBlock">
+		<div id="disqus_thread"></div>
+<script>
+    
+    // RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    // LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    var disqus_config = function () {
+    this.page.url = RENT_CAR;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 1; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://rent-car-5.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		
+		<!-- <div id="sigCommentsBlock">
 		</div>
 		<a href="http://sigcomments.com" style="font-size: 0.6em;">Система комментирования SigComments</a>
 		<script>
@@ -241,23 +275,12 @@
 				var ss = document.getElementsByTagName('script')[0];
 				ss.parentNode.insertBefore(script, ss);
 			})();
-		</script>
+		</script> -->
 	</section>
 	<!--Подвал футер  -->
-	<footer class="footer">
+	<footer class="footer" id="social">
 		<div class="footer_contact">
-			<!-- <div id="sigCommentsBlock"></div> -->
-			<!-- <a href="http://sigcomments.com" style="font-size: 0.6em;">Система комментирования SigComments</a> -->
-	<!-- <script>
-	(function(){
-		var host_id = '5056';
-		var script = document.createElement('script');
-		script.async = true;
-		script.src = '//sigcomments.com/chat/?host_id='+host_id;
-		var ss = document.getElementsByTagName('script')[0]; 
-		ss.parentNode.insertBefore(script, ss);
-	})();
-</script> -->
+		
 
 		</div>
 	</footer>
@@ -605,8 +628,8 @@
 <!-- Условия аренды -->
 	<div class="contract_modal_window">
 		<span class="contract_modal_window_close">&times;</span>
-		<span class="title_conditions">Умови прокату </span> 
-		<span class="title_contract">Договір</span>
+		<span class="title_conditions">Условия проката </span> 
+		<span class="title_contract">Договор</span>
 		<div class="contract_modal_window_conditions">
 			<p>Внимание! Указанные тарифы распространяются на использование автомобиля в черте города и на междугородние поездки.</p>
 <p>Автомобили предоставляются без водителя, по желанию можем предоставить водителя за отдельную плату. Минимальный срок аренды составляет от 1 сутки. (24 часа). При превышении заранее оговоренного срока аренды автомобиля (до 24 часов) взимается почасовая арендная плата. (50 грн./час). Продление аренды осуществляется путем переподписания договора аренды.</p>
