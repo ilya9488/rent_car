@@ -9,7 +9,6 @@ li {
 
 * {
   box-sizing: border-box;
-  // transition: 0.5s;
 }
 
 html {
@@ -24,6 +23,17 @@ body {
 
 section {
   height: auto;
+}
+
+// Анимация появления
+@keyframes hide {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 // Анимация слайдов на фоне main
@@ -148,13 +158,11 @@ section {
         position: absolute;
         font-size: 0.8rem;
       }
-
     }
 
     li.nav_contract {
       cursor: pointer;
     }
-
 
     ul {
       /* display: flex; */
@@ -169,10 +177,6 @@ section {
       height: 70px;
       top: -1rem;
       left: 3rem;
-      /* padding: 10px; */
-      /* background-color: #fff; */
-      /* box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); */
-      /* border-radius: 50%; */
     }
 
     ul li {
@@ -185,20 +189,6 @@ section {
     .nav_list {
       padding-left: 15rem;
     }
-
-    ul li.ua,
-    .ru {
-      position: relative;
-      color: #000;
-      text-shadow: 0 0 25px #fff;
-      margin-left: 10rem;
-    }
-
-    .ru {
-      margin: 0;
-      padding: 5px;
-    }
-
   }
 
   // Заголовоек
@@ -331,7 +321,8 @@ section {
   margin: 2rem auto;
   text-align: center;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.4s;
+  animation: hide 1s;
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.8);
@@ -535,7 +526,7 @@ section {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
+  z-index: 9999999991 !important;
   border-radius: 10px;
   box-shadow: 0 0 20px #000;
   animation: hide 1s;
@@ -712,16 +703,17 @@ section {
 }
 
 .contract_modal_window {
-  position: absolute;
+  position: fixed;
   background-color: #fff;
   width: 60rem;
-  height: auto;
+  height: 37rem;
   left: 50%;
   top: 5rem;
   padding: 3rem;
   border-radius: 2rem;
   z-index: 3;
   transform: translate(-50%);
+  overflow: hidden;
   animation: hide 1s;
   display: none;
 
@@ -761,7 +753,14 @@ section {
     }
   }
 
-  &_text {}
+  &_conditions,
+  &_contract {
+    box-shadow: 0px 6px 5px 0px rgba(50, 50, 50, 0.3);
+    height: 25rem;
+    overflow-y: scroll;
+    padding: 1rem;
+    border-left: 1px solid #000;
+  }
 }
 
 .contract_back {
@@ -787,9 +786,11 @@ div#__replain_widget {
 
 .menu_burger {
   position: fixed;
-  width: 50px;
-  height: 50px;
-  background-color: transparent;
+  width: 70px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  padding: 1rem;
   right: 1rem;
   top: 1rem;
   z-index: 50;
@@ -810,15 +811,7 @@ div#__replain_widget {
   }
 }
 
-@keyframes hide {
-  0% {
-    opacity: 0;
-  }
 
-  100% {
-    opacity: 1;
-  }
-}
 
 .menu_berger_list {
   position: fixed;
@@ -828,7 +821,7 @@ div#__replain_widget {
   background-color: rgba(0, 0, 0, 0.8);
   font-size: 1rem;
   padding-top: 1rem;
-  z-index: 50;
+  z-index: 9999999991;
   animation: hide 0.7s;
   display: none;
 
@@ -869,7 +862,8 @@ div#__replain_widget {
   height: 100%;
   left: 0;
   top: 0;
-  background-color: transparent;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.2;
   z-index: 3 !important;
   display: none;
 }
@@ -925,36 +919,6 @@ div#__replain_widget {
   padding-top: 4px;
 }
 
-// Слайдер на фон (?)
-
-// .container {
-//   width: 100vw;
-//   margin: 0 auto;
-// }
-
-// .slider {
-//   position: relative;
-//   max-width: 100%;
-//   min-height: 50rem;
-//   margin: 0 auto;
-//   overflow: hidden;
-//   /* display: none; */
-// }
-
-// .slider_line {
-//   /* display: flex; */
-//   width: 100%;
-//   height: 100%;
-//   transition: all ease 0.4s;
-// }
-
-// .slider_line img {
-//   position: absolute;
-//   height: 100%;
-//   width: 100%;
-//   transition: 1s;
-// }
-
 .opasiti0 {
   opacity: 0;
 }
@@ -987,10 +951,153 @@ div#__replain_widget {
 }
 
 // ===== Медиа запросы ======= 
+@media (max-width: 1000px) {
+  .nav_container {
+    font-size: 1.2rem !important;
 
-@media (max-width: 767px) {
+    li .small_car {
+      left: 1rem !important;
+    }
 
-  //  Блок 1 
+    ul li {
+      padding-left: 1rem !important;
+    }
+
+    .nav_list {
+      padding-left: 7rem !important;
+    }
+  }
+
+  .main {
+    .title {
+      height: 8rem;
+      top: 18rem;
+      padding: 4rem 1rem 2rem 8rem;
+
+      h1 {
+        font-size: 1.9rem;
+      }
+
+      img {
+        top: -9rem;
+        left: 16rem;
+      }
+    }
+  }
+
+  .contract_modal_window {
+    width: 100%;
+    height: 34rem;
+
+    .title_conditions,
+    .title_contract {
+      width: 17rem;
+      margin: 0 0 2rem 3rem;
+    }
+  }
+
+  //  модальные окна машин
+  .modal_window_car_price {
+    width: 22rem;
+    height: 30rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    padding: 0 !important;
+    // display: block;
+
+    .close_modal_car_price {
+      right: 1rem;
+      font-size: 3rem;
+      text-shadow: 0 0 15px #fff;
+      z-index: 3;
+    }
+
+    &_content {
+      width: 100%;
+      height: 100%;
+      margin: 0 !important;
+      padding: 0 !important;
+
+      &_img {
+        display: block;
+        width: 20rem;
+        height: 13.3rem;
+        margin-top: 1rem;
+        margin-left: 1rem;
+
+        img {
+          width: 100%;
+        }
+
+      }
+
+      &_table {
+        display: block;
+        position: absolute;
+        width: 22rem;
+        height: 25rem;
+        left: -0.7rem;
+        bottom: -10rem;
+        // margin-top: 5rem;
+        // margin-left: -7rem;
+        // box-shadow: 0 0 20px #000;
+
+        &_colum {
+          display: inline-block;
+          position: relative;
+          width: 80px;
+          height: 15rem;
+          margin: 0;
+          left: 0;
+          margin-right: 0.1rem;
+
+          &_block {
+            position: relative;
+            display: block;
+            height: 6rem;
+            margin-top: 0.2rem;
+            border-radius: 10px;
+            padding: 0.5rem;
+            text-align: center;
+            font-size: 1rem;
+
+            img {
+              width: 30px;
+            }
+          }
+
+          .head_table {
+            height: 3rem;
+            padding: 0.6rem 0 0 0;
+            font-size: 0.8rem;
+          }
+
+          .price_day_tble {
+            height: 3rem;
+            padding-top: 0.8rem;
+            font-size: 1.1rem;
+          }
+
+          .img_table {
+            height: 4rem;
+            font-size: 0.7rem;
+          }
+
+          .margin {
+            // margin-top: 10rem !important;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+
+  // body 
   // навигация
   .nav_container {
     display: none;
@@ -1001,29 +1108,247 @@ div#__replain_widget {
     display: block;
   }
 
+  //  Блок 1 
+  .main {
 
-  // Заголовоек
+    // Заголовоек
+    .title {
+      width: 100%;
+      height: 7rem;
+      top: 5rem;
+      padding: 4rem 1rem 2rem 1rem;
 
-  .title {
-    position: relative;
-    width: 100%;
-    height: 7rem !important;
-    top: 15rem !important;
-    padding: 4rem 1rem 2rem 1rem !important;
+      h1 {
+        font-size: 1.5rem;
+        margin: 0;
+      }
 
-    h1 {
-      position: relative;
-      font-size: 1.5rem;
-      margin: 0;
+      img {
+        display: inline-block;
+        position: absolute;
+        width: 10rem;
+        height: 10rem;
+        top: -5rem;
+        left: 10rem;
+      }
+    }
+  }
+
+
+  // Чат 
+  .modal_window_call {
+    left: 4rem;
+    bottom: -1rem;
+    z-index: 999;
+
+    &_phones {
+      &_number {
+        a {
+          img {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+
+  // footer
+  .footer {
+    height: 12rem;
+    background-color: rgb(78, 78, 78);
+    color: #fff;
+    text-align: center;
+    padding-top: 1rem;
+
+    &_contact {
+      width: 7rem;
+      height: 7rem;
+      border: 2px solid #fff;
+      padding-top: 1.5rem;
+
+      .fa-instagram {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  #sigCommentsBlock {
+    width: 23rem;
+    transform: translateX(-6rem);
+    left: -10rem !important;
+  }
+
+  // Блок отзывы 
+  .coments {
+    width: 20rem;
+    margin: 0 auto;
+  }
+
+  //  модальные окна
+  .modal_window_car_price {
+    width: 32rem;
+    height: 19rem;
+    left: 1rem;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 99;
+    padding: 0 !important;
+
+    .close_modal_car_price {
+      right: 1rem;
+      font-size: 3rem;
+      text-shadow: 0 0 15px #fff;
+      z-index: 3;
     }
 
-    img {
-      display: inline-block;
-      position: absolute;
+    &_content {
+      width: 100%;
+      height: 100%;
+      margin: 0 !important;
+      padding: 0 !important;
+
+      &_img {
+        display: block;
+        width: 10rem;
+        height: 13.3rem;
+        margin-top: 7rem;
+        margin-left: 21rem;
+
+        img {
+          width: 100%;
+        }
+
+      }
+
+      &_table {
+        display: block;
+        position: absolute;
+        width: 22rem;
+        height: 25rem;
+        left: -0.7rem;
+        bottom: -10rem;
+        // margin-top: 5rem;
+        // margin-left: -7rem;
+        // box-shadow: 0 0 20px #000;
+
+        &_colum {
+          display: inline-block;
+          position: relative;
+          width: 80px;
+          height: 15rem;
+          margin: 0;
+          left: 0;
+          margin-right: 0.1rem;
+
+          &_block {
+            position: relative;
+            display: block;
+            height: 6rem;
+            margin-top: 0.2rem;
+            border-radius: 10px;
+            padding: 0.5rem;
+            text-align: center;
+            font-size: 1rem;
+
+            img {
+              width: 30px;
+            }
+          }
+
+          .head_table {
+            height: 3rem;
+            padding: 0.6rem 0 0 0;
+            font-size: 0.8rem;
+          }
+
+          .price_day_tble {
+            height: 3rem;
+            padding-top: 0.8rem;
+            font-size: 1.1rem;
+          }
+
+          .img_table {
+            height: 4rem;
+            font-size: 0.7rem;
+          }
+
+          .margin {
+            // margin-top: 10rem !important;
+          }
+        }
+      }
+    }
+
+  }
+
+  .contract_modal_window {
+    width: 100vw;
+    top: 0;
+    padding: 1rem 1rem 1rem 0.5rem;
+    z-index: 9999999991;
+
+    .contract_back {
+      width: 100vw;
+    }
+
+    .title_conditions,
+    .title_contract {
       width: 10rem !important;
-      height: 10rem !important;
-      top: -5rem !important;
-      left: 10rem;
+      font-size: 1rem !important;
+      padding: 1rem 0.4rem !important;
+      margin: 0 auto !important;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+
+    &_conditions,
+    &_contract {
+      height: 15rem;
+      margin-top: 1rem;
+      border-left: none;
+    }
+  }
+}
+
+@media (max-width: 639px) {
+
+  // body 
+  // навигация
+  .nav_container {
+    display: none;
+  }
+
+  //  Менб бургер
+  .menu_burger {
+    display: block;
+  }
+
+  //  Блок 1 
+  .main {
+
+    // Заголовоек
+    .title {
+      width: 100%;
+      height: 7rem;
+      top: 15rem;
+      padding: 4rem 1rem 2rem 1rem;
+
+      h1 {
+        font-size: 1.5rem;
+        margin: 0;
+      }
+
+      img {
+        display: inline-block;
+        position: absolute;
+        width: 10rem;
+        height: 10rem;
+        top: -5rem;
+        left: 10rem;
+      }
     }
   }
 
@@ -1061,16 +1386,13 @@ div#__replain_widget {
     background-position: -12px -12px !important;
     bottom: 5.5rem;
     right: 0.7rem;
-
-    img {
-      // padding-top: 55px;
-    }
   }
 
   .modal_window_call {
-    right: 2rem;
+    bottom: 2rem;
+    right: 3rem;
     animation: hide 0.7s;
-
+    z-index: 999;
   }
 
   // Чат 
@@ -1224,19 +1546,35 @@ div#__replain_widget {
 
   .contract_modal_window {
     width: 100vw;
-    margin-top: 0;
-    padding: 3rem 1rem;
-  }
+    top: 0;
+    padding: 4rem 1rem 1rem 0;
+    z-index: 9999999991;
 
-  .contract_back {
-    width: 100vw;
-  }
+    .contract_back {
+      width: 100vw;
+    }
 
-  .title_conditions,
-  .title_contract {
-    width: 9rem !important;
-    font-size: 1rem !important;
-    padding: 1rem 0.4rem !important;
-    margin: 0 !important;
+    .title_conditions,
+    .title_contract {
+      width: 10rem !important;
+      font-size: 1rem !important;
+      padding: 1rem 0.4rem !important;
+      margin: 0 !important;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+
+    .title_conditions {
+      margin-left: 0.7rem !important;
+    }
+
+    &_conditions,
+    &_contract {
+      height: 25rem;
+      margin-top: 1rem;
+      border-left: none;
+    }
   }
 }
